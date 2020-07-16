@@ -27,7 +27,11 @@ spring:
         - id: view
           uri: http://localhost:8085
           predicates:
-            - Path= 
+            - Path= /views/**
+        - id: marketing
+          uri: http://localhost:8086
+          predicates:
+            - Path=/marketings/** 
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -67,6 +71,10 @@ spring:
           uri: http://admin14-view:8080
           predicates:
             - Path=/views/** 
+        - id: marketing
+          uri: http://admin14-marketing:8080
+          predicates:
+            - Path=/marketings/** 
       globalcors:
         corsConfigurations:
           '[/**]':
