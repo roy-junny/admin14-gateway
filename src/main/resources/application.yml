@@ -74,7 +74,7 @@ spring:
         - id: marketing
           uri: http://admin14-marketing:8080
           predicates:
-            - Path=/marketings/** 
+            - Path=/marketings/**, /userInfoes/**
       globalcors:
         corsConfigurations:
           '[/**]':
